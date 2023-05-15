@@ -42,4 +42,5 @@ function cambiarModo() {
 // Función para cambiar el tamaño de fuente
 function cambiarTamaño() {
   var selectTamaño = document.getElementById('tamaño');
-  var nuevoTamaño = select
+  var nuevoTamaño = select;
+}
