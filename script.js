@@ -42,5 +42,28 @@ function cambiarModo() {
 // Función para cambiar el tamaño de fuente
 function cambiarTamaño() {
   var selectTamaño = document.getElementById('tamaño');
-  var nuevoTamaño = select;
+  var nuevoTamaño = selectTamaño.value;
+
+  document.body.classList.remove(tamañoActual);
+  document.body.classList.add(nuevoTamaño);
+
+  localStorage.setItem('tamaño', nuevoTamaño);
+  tamañoActual = nuevoTamaño;
 }
+
+// Establecer el modo y tamaño actual en la carga de la página
+document.addEventListener('DOMContentLoaded', function() {
+  if (modoActual === 'random') {
+    cambiarModo(); // Generar colores aleatorios al cargar la página si el modo es "Random"
+  } else {
+    document.body.classList.add(modoActual);
+  }
+
+  document.body.classList.add(tamañoActual);
+
+  var selectModo = document.getElementById('modo');
+  selectModo.value = modoActual;
+
+  var selectTamaño = document.getElementById('tamaño');
+  selectTamaño.value = tamañoActual;
+});
