@@ -39,5 +39,3 @@ document.addEventListener('DOMContentLoaded', function() {
   var selectTamaño = document.getElementById('tamaño');
   selectTamaño.value = tamañoActual;
 });
-
-

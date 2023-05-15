@@ -8,15 +8,15 @@ h1 {
 }
 
 .pequeño {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .mediano {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .grande {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .dia {
@@ -29,6 +29,16 @@ h1 {
   color: #fff;
 }
 
+/* Estilos para mejorar la accesibilidad */
+label {
+  font-weight: bold;
+}
+
+select {
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
 .btn {
   display: inline-block;
   padding: 10px 20px;
