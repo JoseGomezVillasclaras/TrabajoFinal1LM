@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./estilos.css" id="estilos">
+   
+
+</head>
+<body id="todo">
+
+
+  <div class="contenedorBarra">
+    <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Index.html" class="btn">Inicio</a>
+    <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Juego.html" class="btn">Un Juego</a>
+    <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/ajustes.html" class="btn">Ajustes</a>
+  </div>
+
+    <div class="contenedorImagenes">
+        <div class="imagen">
+          <img src="1.png" class="img" alt="Imagen 1">
+          <p>Texto de la imagen 1</p>
+        </div>
+        <div class="imagen">
+          <img src="2.png"class="img" alt="Imagen 2">
+          <p>Texto de la imagen 2</p>
+        </div>
+        <div class="imagen">
+          <img src="3.png"class="img" alt="Imagen 3">
+          <p>Texto de la imagen 3</p>
+        </div>
+        <div class="imagen">
+            <img src="4.png"class="img" alt="Imagen 4">
+            <p>Texto de la imagen 4</p>
+          </div>
+        <!-- Agrega más divs con la clase "imagen" según el número de imágenes deseadas -->
+      </div>
+    
+
+      <script>
+        function aplicarCambios() {
+            // mostramos en consola los valores recogidos en la pagina
+            var color = document.getElementsByName('colorElegido')[0];
+            console.log('color elegido ' + color.value);
+
+            var tam = document.getElementsByName('tamFuente')[0];
+            var tamelegido = tam[tam.selectedIndex].value;
+
+            // aplicamos el color y el tamaño a todo el documento
+            document.documentElement.style.fontSize = parseFloat(tamelegido) + "rem";
+            document.documentElement.style.setProperty("--colorNormal", color.value);
+            document.getElementById('mensaje').innerHTML = "APLICADO";
+            
+        }
+    </script>
+    <script src="./script.js"></script>
+</body>
+</html>

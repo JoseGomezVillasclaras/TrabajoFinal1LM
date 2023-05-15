@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./fuentes.css">
+  <link rel="stylesheet" href="./estilos.css" id="estilos">
+</head>
+
+<body id="todo">
+
+  <div class="contenedorBarra">
+    <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Index.html" class="btn">Inicio</a>
+    <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Juego.html" class="btn">Un Juego</a>
+    <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/ajustes.html" class="btn">Ajustes</a>
+  </div>
+  <h1 style="color: black;">Configuración</h1>
+  <label for="modo">Modo:</label>
+  <select id="modo" onchange="cambiarModo()">
+    <option value="dia">Día</option>
+    <option value="noche">Noche</option>
+  </select>
+
+  <br><br>
+
+  <label for="tamaño">Tamaño de fuente:</label>
+  <select id="tamaño" onchange="cambiarTamaño()">
+    <option value="pequeño">Pequeño</option>
+    <option value="mediano">Mediano</option>
+    <option value="grande">Grande</option>
+  </select>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
