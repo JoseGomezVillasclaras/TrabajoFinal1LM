@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./estilos.css" id="estilos">
+  <title>Página de Reservas - En construcción</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+    <header>
+
+        <div class="contenedorBarra">
+          <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Index.html" class="btn">Inicio</a>
+          <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Juego.html" class="btn">Un Juego</a>
+          <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/ajustes.html" class="btn">Ajustes</a>
+          <a href="./soldadito.xml" class="btn">XML</a>
+          <button onclick="openModal()" class="btn">Modal</button>
+        </div>
+      </header>
+    
+      <!-- Agrega más divs con la clase "imagen" según el número de imágenes deseadas -->
+      <div id="myModal" class="modal" style="display: none">
+        <div class="modal-content">
+          <h2>Modal</h2>
+          <p>Jose</p>
+          <button onclick="closeModal()">Cerrar</button>
+        </div>
+      </div>
+      <div class="elemento-Usuario" id="textoUsuario">
+        <p></p>
+      </div>
+
+  <img src="construccion.jpg" alt="En construcción">
+  <h1>Página de Reservas - En construcción</h1>
+  <p>Estamos trabajando en la creación de la página de reservas.</p>
+  <p>Vuelve pronto para disfrutar de nuestro sistema de reservas en línea.</p>
+<script>
+  var usuario = sessionStorage.getItem("textoGuardado");
+  if (usuario) {
+    document.getElementById("textoUsuario").innerText = usuario;
+  }
+
+  function guardarUsuario() {
+    var texto = document.getElementById("textoInput").value;
+    sessionStorage.setItem("textoGuardado", texto);
+    alert("Nombre de usuario guardado.");
+    document.getElementById("textoUsuario").innerText = texto;
+  }
+
+</script>
+<script src="./script.js"></script>
+</body>
+</html>
