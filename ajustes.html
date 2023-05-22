@@ -58,7 +58,19 @@
     </select>
   
 
+    <script>
+        var usuario = sessionStorage.getItem("textoGuardado");
+    if (usuario) {
+      document.getElementById("textoUsuario").innerText = usuario;
+    }
 
+    function guardarUsuario() {
+      var texto = document.getElementById("textoInput").value;
+      sessionStorage.setItem("textoGuardado", texto);
+      alert("Nombre de usuario guardado.");
+      document.getElementById("textoUsuario").innerText = texto;
+    }
+    </script>
 
     <script src="script.js"></script>
   </body>
