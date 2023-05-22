@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="Soldadito.xsl"?>
 <?xml-stylesheet href="soldadito.css"?>
-<root>
-  <header>
-    <![CDATA[
-      <div class="contenedorBarra">
-        <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Index.html" class="btn">Inicio</a>
-        <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Juego.html" class="btn">Un Juego</a>
-        <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/ajustes.html" class="btn">Ajustes</a>
-        <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/soldadito.xml" class="btn">XML</a>
-        <button onclick="openModal()" class="btn">Modal</button>
-      </div>
-    ]]>
-  </header>
-</root>
+
 <cancion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///C:/Users/1%C2%BADAW/Documents/JoseGomez/LeguajeDeMarcas/Lenguaje-de-Marcas/T2/soldadito.xsd">
 	<titulo>Soldadito Marinero</titulo>
 	<autor>Fito y los Fitipaldis</autor>
