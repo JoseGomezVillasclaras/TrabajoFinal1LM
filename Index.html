@@ -102,16 +102,13 @@
     if (usuario) {
       document.getElementById("textoUsuario").innerText = usuario;
     }
-    if (!usuario) {
-      "Sin identificar" = usuario;
-    }
 
     function guardarUsuario() {
-      
-      texto = document.getElementById("textoInput").value;
+      var texto = document.getElementById("textoInput").value;
       sessionStorage.setItem("textoGuardado", texto);
       alert("Nombre de usuario guardado.");
       document.getElementById("textoUsuario").innerText = texto;
+    
     }
  
   </script>
