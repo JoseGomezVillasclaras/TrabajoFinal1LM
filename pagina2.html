@@ -90,6 +90,10 @@
           <button onclick="closeModal()">Cerrar</button>
         </div>
       </div>
+
+      <div class="elemento-Usuario" id="textoUsuario">
+        <p></p>
+      </div>
   <div class="container">
     <h2>Villa Lola</h2>
     <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="3000">
@@ -118,6 +122,20 @@
     </div>
     <a href="reservas.html" class="button">Reservar ahora</a>
   </div>
+  <script>
+     var usuario = sessionStorage.getItem("textoGuardado");
+    if (usuario) {
+      document.getElementById("textoUsuario").innerText = usuario;
+    }
+
+    function guardarUsuario() {
+      var texto = document.getElementById("textoInput").value;
+      sessionStorage.setItem("textoGuardado", texto);
+      alert("Nombre de usuario guardado.");
+      document.getElementById("textoUsuario").innerText = texto;
+    }
+ 
+  </script>
   <script src="./script.js"></script>
 </body>
 </html>
