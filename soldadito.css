@@ -6,6 +6,7 @@ body {
 
 p.{
     color:black;
+    font: oblique bold 120% cursive;
     background-color: rgb(198, 119, 218);
 }
 
