@@ -10,15 +10,7 @@
 		<xsl:template match="tipo">
 			
 		</xsl:template>
-			<xsl:template name="headerTemplate">
-    <div class="contenedorBarra">
-      <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Index.html" class="btn">Inicio</a>
-      <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Juego.html" class="btn">Un Juego</a>
-      <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/ajustes.html" class="btn">Ajustes</a>
-      <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/soldadito.xml" class="btn">XML</a>
-      <button onclick="openModal()" class="btn">Modal</button>
-    </div>
-  </xsl:template>
+			
 			
 	<xsl:template match="verso">
      <p>
