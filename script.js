@@ -16,6 +16,14 @@ function generarColorAleatorio() {
   return color;
 }
 
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
 // Función para cambiar el modo
 function cambiarModo() {
   var selectModo = document.getElementById('modo');
@@ -50,6 +58,11 @@ function cambiarTamaño() {
   localStorage.setItem('tamaño', nuevoTamaño);
   tamañoActual = nuevoTamaño;
 }
+function guardarUsuario() {
+  var texto = document.getElementById("textoInput").value;
+  var usuario=sessionStorage.setItem("textoGuardado", texto);
+  alert("Nombre de usuario Guardado.");
+}
 
 // Establecer el modo y tamaño actual en la carga de la página
 document.addEventListener('DOMContentLoaded', function() {
@@ -67,3 +80,4 @@ document.addEventListener('DOMContentLoaded', function() {
   var selectTamaño = document.getElementById('tamaño');
   selectTamaño.value = tamañoActual;
 });
+sesionStorage

@@ -1,60 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./estilos.css" id="estilos">
-   
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./estilos.css" id="estilos">
+
+  <style>
+    header {
+      background-color: #ACB1D6;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
 
 </head>
+
 <body id="todo">
 
+  <header>
 
-  <div class="contenedorBarra">
-    <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Index.html" class="btn">Inicio</a>
-    <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Juego.html" class="btn">Un Juego</a>
-    <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/ajustes.html" class="btn">Ajustes</a>
+    <div class="contenedorBarra">
+      <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Index.html" class="btn">Inicio</a>
+      <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Juego.html" class="btn">Un Juego</a>
+      <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/ajustes.html" class="btn">Ajustes</a>
+      <button onclick="openModal()" class="btn">Modal</button>
+    </div>
+  </header>
+
+  <!-- Agrega más divs con la clase "imagen" según el número de imágenes deseadas -->
+  <div id="myModal" class="modal" style="display: none">
+    <div class="modal-content">
+      <h2>Modal</h2>
+      <p>Jose</p>
+      <button onclick="closeModal()">Cerrar</button>
+    </div>
   </div>
 
-    <div class="contenedorImagenes">
-        <div class="imagen">
-          <img src="1.png" class="img" alt="Imagen 1">
-          <p>Texto de la imagen 1</p>
-        </div>
-        <div class="imagen">
-          <img src="2.png"class="img" alt="Imagen 2">
-          <p>Texto de la imagen 2</p>
-        </div>
-        <div class="imagen">
-          <img src="3.png"class="img" alt="Imagen 3">
-          <p>Texto de la imagen 3</p>
-        </div>
-        <div class="imagen">
-            <img src="4.png"class="img" alt="Imagen 4">
-            <p>Texto de la imagen 4</p>
-          </div>
-        <!-- Agrega más divs con la clase "imagen" según el número de imágenes deseadas -->
+  <div class="elemento-Usuario" id="textoUsuario">
+    <p></p>
+  </div>
+
+  <div class="contenedorImagenes">
+    <div class="imagen">
+      <a href="pagina1.html">
+        <img src="ap11.png" class="img" alt="Imagen 1">
+      </a>
+      <div class="contenedor-texto">
+        <p>Sunny Studio</p>
+
       </div>
+    </div>
+    <div class="imagen">
+      <a href="pagina2.html">
+        <img src="ap21.png" class="img" alt="Imagen 2">
+      </a>
+      <div class="contenedor-texto">
+        <p>Villa Lola</p>
+      </div>
+    </div>
+    <div class="imagen">
+      <a href="pagina3.html">
+        <img src="3.png" class="img" alt="Imagen 3">
+      </a>
+      <p>Texto de la imagen 3</p>
+    </div>
+
+    <!-- Agrega más divs con la clase "imagen" según el número de imágenes deseadas -->
+  </div>
+
+
+  <script>
+    function aplicarCambios() {
+      // mostramos en consola los valores recogidos en la pagina
+      var color = document.getElementsByName('colorElegido')[0];
+      console.log('color elegido ' + color.value);
+
+      var tam = document.getElementsByName('tamFuente')[0];
+      var tamelegido = tam[tam.selectedIndex].value;
+
+      // aplicamos el color y el tamaño a todo el documento
+      document.documentElement.style.fontSize = parseFloat(tamelegido) + "rem";
+      document.documentElement.style.setProperty("--colorNormal", color.value);
+      document.getElementById('mensaje').innerHTML = "APLICADO";
+
+    }
+
     
+    var usuario = sessionStorage.getItem("textoGuardado");
+    if (usuario) {
+      document.getElementById("textoUsuario").innerText = usuario;
+    }
 
-      <script>
-        function aplicarCambios() {
-            // mostramos en consola los valores recogidos en la pagina
-            var color = document.getElementsByName('colorElegido')[0];
-            console.log('color elegido ' + color.value);
+    function guardarUsuario() {
+      var texto = document.getElementById("textoInput").value;
+      sessionStorage.setItem("textoGuardado", texto);
+      alert("Nombre de usuario guardado.");
+      document.getElementById("textoUsuario").innerText = texto;
+    }
+ 
+  </script>
+  <script src="./script.js"></script>
 
-            var tam = document.getElementsByName('tamFuente')[0];
-            var tamelegido = tam[tam.selectedIndex].value;
-
-            // aplicamos el color y el tamaño a todo el documento
-            document.documentElement.style.fontSize = parseFloat(tamelegido) + "rem";
-            document.documentElement.style.setProperty("--colorNormal", color.value);
-            document.getElementById('mensaje').innerHTML = "APLICADO";
-            
-        }
-    </script>
-    <script src="./script.js"></script>
 </body>
+
 </html>

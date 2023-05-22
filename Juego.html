@@ -25,10 +25,23 @@
   <link rel="stylesheet" href="./estilos.css" id="estilos">
 </head>
 <body>
-  <div class="contenedorBarra">
-    <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Index.html" class="btn">Inicio</a>
-    <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Juego.html" class="btn">Un Juego</a>
-    <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/ajustes.html" class="btn">Ajustes</a>
+  <header>
+
+    <div class="contenedorBarra">
+      <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Index.html" class="btn">Inicio</a>
+      <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Juego.html" class="btn">Un Juego</a>
+      <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/ajustes.html" class="btn">Ajustes</a>
+      <button onclick="openModal()" class="btn">Modal</button>
+    </div>
+  </header>
+
+  <!-- Agrega más divs con la clase "imagen" según el número de imágenes deseadas -->
+  <div id="myModal" class="modal" style="display: none">
+    <div class="modal-content">
+      <h2>Modal</h2>
+      <p>Jose</p>
+      <button onclick="closeModal()">Cerrar</button>
+    </div>
   </div>
 
   <h1>Tres en Raya</h1>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alojamiento Turístico</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/theme.css">
+  <link rel="stylesheet" href="./estilos.css" id="estilos">
+  <style>
+    /* Estilos CSS para personalizar la apariencia */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ACB1D6;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .slider {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .slider-controls {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .slider-controls button {
+      margin: 0 5px;
+      padding: 5px 10px;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle2/2.1.6/jquery.cycle2.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.slider-prev').click(function() {
+        $('.cycle-slideshow').cycle('prev');
+      });
+
+      $('.slider-next').click(function() {
+        $('.cycle-slideshow').cycle('next');
+      });
+    });
+  </script>
+</head>
+<body>
+    <header>
+
+        <div class="contenedorBarra">
+          <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Index.html" class="btn">Inicio</a>
+          <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/Juego.html" class="btn">Un Juego</a>
+          <a href="https://josegomezvillasclaras.github.io/TrabajoFinal1LM/ajustes.html" class="btn">Ajustes</a>
+          <button onclick="openModal()" class="btn">Modal</button>
+        </div>
+      </header>
+    
+      <!-- Agrega más divs con la clase "imagen" según el número de imágenes deseadas -->
+      <div id="myModal" class="modal" style="display: none">
+        <div class="modal-content">
+          <h2>Modal</h2>
+          <p>Jose</p>
+          <button onclick="closeModal()">Cerrar</button>
+        </div>
+      </div>
+  <div class="container">
+    <h2>Villa Lola</h2>
+    <div class="cycle-slideshow" data-cycle-fx="fade" data-cycle-timeout="3000">
+      <img class="slider" src="ap21.PNG" alt="Imagen 1">
+      <img class="slider" src="ap22.jpg" alt="Imagen 2">
+      <img class="slider" src="ap23.PNG" alt="Imagen 3">
+      <img class="slider" src="ap24.PNG" alt="Imagen 4">
+      <img class="slider" src="ap25.PNG" alt="Imagen 5">
+      <img class="slider" src="ap26.PNG" alt="Imagen 6">
+    </div>
+    <p>
+        ¡Bienvenido a nuestra Villa Lola!
+        
+        Nuestra villa es el lugar perfecto para disfrutar de unas vacaciones relajantes y llenas de comodidad. Con dos habitaciones espaciosas, nuestra villa puede alojar cómodamente hasta cuatro personas, lo que la convierte en el destino ideal para parejas, familias o grupos de amigos.
+        
+        Cada habitación ha sido cuidadosamente diseñada y equipada con todo lo que necesitas para una estancia agradable. Las camas cómodas y acogedoras te brindarán un merecido descanso después de un día lleno de diversión. Además, cada habitación cuenta con armarios y almacenamiento suficiente para todas tus pertenencias.
+        
+        Nuestra villa también ofrece una amplia sala de estar, perfecta para relajarte y socializar con tus seres queridos. La cocina está totalmente equipada con electrodomésticos modernos y utensilios de cocina, lo que te permitirá preparar tus comidas favoritas durante tu estancia. También puedes disfrutar de tus comidas en el comedor o en la terraza al aire libre, rodeado de un entorno tranquilo y hermoso.
+        
+        Pero eso no es todo. Nuestra villa cuenta con una piscina privada donde puedes darte un refrescante chapuzón y disfrutar del sol mediterráneo. Puedes relajarte en las tumbonas junto a la piscina y disfrutar de la tranquilidad y privacidad que te ofrece nuestro oasis.</p>
+    <p>Dirección: C. Salares, 7, 29780 Nerja, Málaga</p>
+    <p>Precio por noche: $X</p>
+    <div class="slider-controls">
+      <button class="slider-prev">Anterior</button>
+      <button class="slider-next">Siguiente</button>
+    </div>
+    <a href="reservas.html" class="button">Reservar ahora</a>
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>

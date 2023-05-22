@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Almacenamiento en sessionStorage</title>
+  <style>
+    #textoGuardado {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #ACB1D6;
+      padding: 10px;
+      color: #fff;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Almacenamiento en sessionStorage</h1>
+
+  <input type="text" id="textoInput" placeholder="Ingresa un texto">
+  <button onclick="guardarTexto()">Guardar</button>
+  <button onclick="mostrarTexto()">Mostrar</button>
+
+  <div id="textoGuardado"></div>
+
+  <script>
+    var defaultTexto = "Texto predeterminado";
+    var textoGuardado = sessionStorage.getItem("textoGuardado");
+
+    if (textoGuardado) {
+      document.getElementById("textoGuardado").innerText = textoGuardado;
+    } else {
+      sessionStorage.setItem("textoGuardado", defaultTexto);
+      document.getElementById("textoGuardado").innerText = defaultTexto;
+    }
+
+    function guardarTexto() {
+      var texto = document.getElementById("textoInput").value;
+      sessionStorage.setItem("textoGuardado", texto);
+      alert("Texto guardado en sessionStorage.");
+    }
+
+    function mostrarTexto() {
+      var textoGuardado = sessionStorage.getItem("textoGuardado");
+      if (textoGuardado) {
+        alert("Texto almacenado: " + textoGuardado);
+      } else {
+        alert("No se ha almacenado ningún texto en sessionStorage.");
+      }
+    }
+  </script>
+</body>
+</html>
